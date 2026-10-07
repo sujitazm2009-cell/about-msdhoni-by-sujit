@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MS Dhoni | The Legend</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #07111f;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        header {
+            background: #050b14;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #162638;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            color: #00aaff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00aaff;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 90vh;
+            max-width: 1200px;
+            margin: auto;
+            padding: 70px 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .small-title {
+            color: #00aaff;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: 70px;
+            line-height: 1.05;
+            margin: 20px 0;
+        }
+
+        .hero h1 span {
+            color: #00aaff;
+        }
+
+        .hero-text p {
+            color: #b9c5d1;
+            font-size: 18px;
+        }
+
+        /* ================= PHOTO ================= */
+
+        .hero-photo img {
+            width: 420px;
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+        }
+
+        /* ================= BUTTON ================= */
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-right: 10px;
+            border-radius: 6px;
+
+            background: #00aaff;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #0088cc;
+        }
+
+        /* ================= SECTIONS ================= */
+
+        section {
+            padding: 80px 25px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+        }
+
+        .section-title p {
+            color: #aebbc8;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: #0b1827;
+        }
+
+        .about-box {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-box p {
+            color: #c1ccd7;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        /* ================= STATS ================= */
+
+        .stats {
+            max-width: 1000px;
+            margin: 50px auto 0;
+
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+
+        .stat {
+            background: #101f30;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #193249;
+        }
+
+        .stat h3 {
+            color: #00aaff;
+            font-size: 38px;
+        }
+
+        .stat p {
+            color: #b7c2cd;
+        }
+
+        /* ================= EARLY LIFE ================= */
+
+        .life-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .life-box img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .life-text h3 {
+            color: #00aaff;
+            margin-bottom: 8px;
+            margin-top: 20px;
+        }
+
+        .life-text p {
+            color: #c0cbd5;
+        }
+
+        /* ================= TIMELINE ================= */
+
+        .timeline {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .timeline-item {
+            background: #0d1b2a;
+            margin-bottom: 25px;
+            padding: 30px;
+
+            border-left: 4px solid #00aaff;
+            border-radius: 8px;
+        }
+
+        .timeline-item h2 {
+            color: #00aaff;
+        }
+
+        .timeline-item h3 {
+            margin: 5px 0;
+        }
+
+        .timeline-item p {
+            color: #bbc7d2;
+        }
+
+        /* ================= TROPHIES ================= */
+
+        .cards {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #0d1b2a;
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid #172d42;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #00aaff;
+        }
+
+        .trophy {
+            font-size: 50px;
+        }
+
+        .card h3 {
+            color: #00aaff;
+            margin: 10px 0;
+        }
+
+        .card p {
+            color: #bbc7d2;
+        }
+
+        /* ================= RECORDS ================= */
+
+        .records {
+            background: #0b1827;
+        }
+
+        .record-grid {
+            max-width: 1000px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .record {
+            background: #101f30;
+            padding: 35px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .record h3 {
+            font-size: 42px;
+            color: #00aaff;
+        }
+
+        .record p {
+            color: #c0cad4;
+        }
+
+        /* ================= IPL ================= */
+
+        .ipl-box {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .ipl-box img {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .ipl-box p {
+            color: #c1ccd6;
+            margin-bottom: 15px;
+            font-size: 17px;
+        }
+
+        /* ================= AWARDS ================= */
+
+        .award-grid {
+            max-width: 1000px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 25px;
+        }
+
+        .award {
+            background: #0d1b2a;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .award h3 {
+            color: #00aaff;
+        }
+
+        .award p {
+            color: #c1ccd6;
+        }
+
+        /* ================= GALLERY ================= */
+
+        .gallery {
+            background: #0b1827;
+        }
+
+        .gallery-grid {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 25px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #050b14;
+            text-align: center;
+            padding: 30px;
+            color: #8d9aa7;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width:800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .stats,
+            .cards,
+            .record-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .life-box {
+                grid-template-columns: 1fr;
+            }
+
+            .award-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(max-width:550px) {
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .stats,
+            .cards,
+            .record-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid img {
+                height: 280px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+                     NAVIGATION
+===================================================== -->
+
+<header>
+
+<nav>
+
+<div class="logo">
+MS DHONI
+</div>
+
+<ul class="nav-links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#life">Early Life</a></li>
+<li><a href="#career">Career</a></li>
+<li><a href="#trophies">Trophies</a></li>
+<li><a href="#records">Records</a></li>
+<li><a href="#ipl">IPL</a></li>
+<li><a href="#awards">Awards</a></li>
+<li><a href="#gallery">Gallery</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<!-- =====================================================
+                         HOME
+===================================================== -->
+
+<section id="home">
+
+<div class="hero">
+
+<div class="hero-text">
+
+<p class="small-title">
+THE LEGEND OF INDIAN CRICKET
+</p>
+
+<h1>
+MAHENDRA<br>
+<span>SINGH DHONI</span>
+</h1>
+
+<p>
+Captain. Wicketkeeper. Finisher. Leader.
+A legendary cricketer who created history for India.
+</p>
+
+<div class="buttons">
+
+<a href="#career" class="btn">
+Explore Career
+</a>
+
+<a href="#trophies" class="btn">
+View Trophies
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-photo">
+
+<!-- =================================================
+     PHOTO 1: MAIN DHONI PHOTO
+     
+     YAHAN APNI DHONI KI PHOTO LAGAO
+
+     Example:
+     images/dhoni.jpg
+
+     Agar photo isi folder me hai:
+     dhoni.jpg
+================================================== -->
+
+<img src="msdhoni.jfif" alt="MS Dhoni">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+                      ABOUT DHONI
+===================================================== -->
+
+<section class="about">
+
+<div class="section-title">
+
+<h2>Who is MS Dhoni?</h2>
+
+<p>The story of one of India's greatest cricket captains.</p>
+
+</div>
+
+
+<div class="about-box">
+
+<p>
+Mahendra Singh Dhoni, popularly known as MS Dhoni or Mahi,
+is one of the most successful captains and wicketkeeper-batters
+in the history of cricket.
+</p>
+
+<p>
+Known for his calm personality, powerful batting,
+excellent wicketkeeping and extraordinary leadership,
+Dhoni became one of the most respected players in world cricket.
+</p>
+
+</div>
+
+
+<div class="stats">
+
+<div class="stat">
+<h3>1981</h3>
+<p>Born</p>
+</div>
+
+<div class="stat">
+<h3>2004</h3>
+<p>International Debut</p>
+</div>
+
+<div class="stat">
+<h3>3</h3>
+<p>Major ICC Titles</p>
+</div>
+
+<div class="stat">
+<h3>2019</h3>
+<p>Last International Match</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+                     EARLY LIFE
+===================================================== -->
+
+<section id="life">
+
+<div class="section-title">
+
+<h2>Early Life</h2>
+
+<p>From Ranchi to the world of cricket.</p>
+
+</div>
+
+
+<div class="container life-box">
+
+
+<div>
+
+<!-- =================================================
+     PHOTO 2: EARLY LIFE PHOTO
+
+     YAHAN DHONI KI YOUNG / EARLY PHOTO LAGAO
+================================================== -->
+
+<img src="msdy.jfif" alt="Young MS Dhoni">
+
+</div>
+
+
+<div class="life-text">
+
+<h3>Birth</h3>
+
+<p>
+MS Dhoni was born on 7 July 1981 in Ranchi,
+Jharkhand, India.
+</p>
+
+<h3>Childhood</h3>
+
+<p>
+During his school days, Dhoni played football and cricket.
+He initially played as a goalkeeper in football.
+</p>
+
+<h3>Cricket Beginning</h3>
+
+<p>
+His wicketkeeping skills and powerful batting eventually
+helped him move forward in professional cricket.
+</p>
+
+<h3>Railway Career</h3>
+
+<p>
+Before becoming an international cricketer,
+Dhoni worked for Indian Railways as a ticket collector
+at Kharagpur.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+                     CAREER TIMELINE
+===================================================== -->
+
+<section id="career" class="about">
+
+<div class="section-title">
+
+<h2>Career Timeline</h2>
+
+<p>Important moments in Dhoni's cricket journey.</p>
+
+</div>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<h2>1981</h2>
+
+<h3>Birth</h3>
+
+<p>
+Mahendra Singh Dhoni was born in Ranchi.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h2>2004</h2>
+
+<h3>International Debut</h3>
+
+<p>
+Dhoni made his ODI debut for India against Bangladesh.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h2>2005</h2>
+
+<h3>First ODI Century</h3>
+
+<p>
+Dhoni scored his first ODI century against Pakistan.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h2>2007</h2>
+
+<h3>T20 World Cup</h3>
+
+<p>
+Dhoni led India to victory in the inaugural ICC Men's
+T20 World Cup.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h2>2011</h2>
+
+<h3>ODI World Cup</h3>
+
+<p>
+Dhoni captained India to victory in the 2011 Cricket
+World Cup and hit the famous winning six in the final.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h2>2013</h2>
+
+<h3>Champions Trophy</h3>
+
+<p>
+India won the ICC Champions Trophy under Dhoni's captaincy.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h2>2019</h2>
+
+<h3>Last International Match</h3>
+
+<p>
+Dhoni played his final international match during the
+2019 Cricket World Cup.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h2>2025</h2>
+
+<h3>ICC Cricket Hall of Fame</h3>
+
+<p>
+MS Dhoni was inducted into the ICC Cricket Hall of Fame.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+                       TROPHIES
+===================================================== -->
+
+<section id="trophies">
+
+<div class="section-title">
+
+<h2>Trophies & Major Achievements</h2>
+
+<p>The major international trophies won under Dhoni's leadership.</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="trophy">🏆</div>
+
+<h3>2007 T20 World Cup</h3>
+
+<p>
+India won the inaugural ICC Men's T20 World Cup
+under MS Dhoni's captaincy.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="trophy">🏆</div>
+
+<h3>2010 Asia Cup</h3>
+
+<p>
+India won the Asia Cup with Dhoni as captain.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="trophy">🏆</div>
+
+<h3>2011 ODI World Cup</h3>
+
+<p>
+Dhoni led India to its second ODI World Cup title.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="trophy">🏆</div>
+
+<h3>2013 Champions Trophy</h3>
+
+<p>
+India won the ICC Champions Trophy under Dhoni's captaincy.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="trophy">🏆</div>
+
+<h3>Asia Cup</h3>
+
+<p>
+Dhoni was part of India's successful Asia Cup campaigns.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="trophy">🏆</div>
+
+<h3>IPL Championships</h3>
+
+<p>
+Dhoni has led Chennai Super Kings to multiple IPL titles.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+                         RECORDS
+===================================================== -->
+
+<section id="records" class="records">
+
+<div class="section-title">
+
+<h2>International Records</h2>
+
+<p>Important career statistics.</p>
+
+</div>
+
+
+<div class="record-grid">
+
+
+<div class="record">
+
+<h3>90</h3>
+
+<p>Test Matches</p>
+
+</div>
+
+
+<div class="record">
+
+<h3>350</h3>
+
+<p>ODI Matches</p>
+
+</div>
+
+
+<div class="record">
+
+<h3>98</h3>
+
+<p>T20I Matches</p>
+
+</div>
+
+
+<div class="record">
+
+<h3>10,000+</h3>
+
+<p>ODI Runs</p>
+
+</div>
+
+
+<div class="record">
+
+<h3>300+</h3>
+
+<p>International Dismissals</p>
+
+</div>
+
+
+<div class="record">
+
+<h3>3</h3>
+
+<p>ICC Major Titles as Captain</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+                          IPL
+===================================================== -->
+
+<section id="ipl">
+
+<div class="section-title">
+
+<h2>MS Dhoni & IPL</h2>
+
+<p>The legendary journey with Chennai Super Kings.</p>
+
+</div>
+
+
+<div class="ipl-box">
+
+
+<!-- =================================================
+     PHOTO 3: IPL PHOTO
+
+     YAHAN CSK / IPL DHONI PHOTO LAGAO
+================================================== -->
+
+<img src="msdipl.jfif" alt="MS Dhoni IPL">
+
+
+<p>
+MS Dhoni became the face and captain of Chennai Super Kings.
+He built CSK into one of the most successful teams in IPL history.
+</p>
+
+<p>
+His calm decision-making, tactical thinking and ability to
+handle pressure made him one of the most respected captains
+in T20 cricket.
+</p>
+
+<p>
+Dhoni's IPL career is closely associated with Chennai Super Kings
+and the famous "Whistle Podu" culture of Chennai.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+                         AWARDS
+===================================================== -->
+
+<section id="awards" class="about">
+
+<div class="section-title">
+
+<h2>Awards & Honours</h2>
+
+<p>Recognition received by MS Dhoni.</p>
+
+</div>
+
+
+<div class="award-grid">
+
+
+<div class="award">
+
+<h3>🏅 Rajiv Gandhi Khel Ratna</h3>
+
+<p>
+Dhoni received India's highest sporting honour at the time,
+the Rajiv Gandhi Khel Ratna.
+</p>
+
+</div>
+
+
+<div class="award">
+
+<h3>🏅 Padma Shri</h3>
+
+<p>
+Dhoni was honoured with the Padma Shri for his contribution
+to Indian cricket.
+</p>
+
+</div>
+
+
+<div class="award">
+
+<h3>🏅 Padma Bhushan</h3>
+
+<p>
+Dhoni received the Padma Bhushan, one of India's
+major civilian honours.
+</p>
+
+</div>
+
+
+<div class="award">
+
+<h3>🏅 ICC Cricket Hall of Fame</h3>
+
+<p>
+Dhoni was inducted into the ICC Cricket Hall of Fame in 2025.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+                         GALLERY
+===================================================== -->
+
+<section id="gallery" class="gallery">
+
+<div class="section-title">
+
+<h2>Dhoni Gallery</h2>
+
+<p>Some memorable moments.</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+
+<!-- PHOTO 4 -->
+
+<img src="msdw.jfif" alt="MS Dhoni">
+
+
+<!-- PHOTO 5 -->
+
+<img src="msdbattig.jfif" alt="MS Dhoni Batting">
+
+
+<!-- PHOTO 6 -->
+
+<img src="ca.jfif" alt="MS Dhoni Captain">
+
+
+<!-- PHOTO 7 -->
+
+<img src="ipl.jpg" alt="MS Dhoni IPL">
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+                         FOOTER
+===================================================== -->
+
+<footer>
+
+<p>
+© 2026 MS Dhoni Tribute Website
+</p>
+
+<p>
+Designed as a fan-made educational website.
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
+
